@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Gallery</title>
+
+<style>
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #000;
+	color: #00ffff;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background-color: Cyan;
+	color: black;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+nav {
+	background-color: #031716;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+nav a {
+	color: #00ffff;
+	text-decoration: none;
+	margin: 0 15px;
+	font-size: 18px;
+}
+
+nav a:hover {
+	color: #76ffd2;
+	text-decoration: underline;
+}
+
+h2 {
+	color: #00ffff;
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 2px solid cyan;
+	padding-bottom: 5px;
+}
+
+.section {
+	margin: 20px auto;
+	width: 80%;
+	flex-grow: 1;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.card {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	perspective: 1000px;
+}
+
+.inner-card {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card:hover .inner-card {
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+}
+
+.front {
+	background-color: #00ffff;
+	color: #000;
+}
+
+.back {
+	background-color: #000;
+	transform: rotateY(180deg);
+}
+
+.back img, .back video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+footer {
+	background-color: #031716;
+	color: white;
+	text-align: center;
+	padding: 20px 30px;
+	font-size: 20px;
+	box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+	color: #1abc9c;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #76ffd2;
+}
+
+footer p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+	gap: 10px;
+}
+
+main {
+	flex-grow: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="top">
+<h1> Welcome to My Gallery </h1>
+</header>
+
+<nav>
+	<a href="#Family">Family</a>
+	<a href="#Friends">Friends</a>
+	<a href="#Interests">Interests</a>
+</nav>
+
+
+<main>
+
+<h2 id="Family">Family</h2>
+	<div class="section">
+	<div class="gallery">
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>Religious gathering of my family members we recite Surah Yasin and did Tahlil for deceased loved ones.</center></div>
+	<div class="back"><img src="images/fam3.jpg" alt="Religious Gathering"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>Family picnic at my sister's and her husband's house.</center></div>
+	<div class="back"><img src="images/fam2.jpg" alt="Family Picnic"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>My family and I are celebrating my parents' birthdays together on the same day.</center></div>
+	<div class="back"><img src="images/fam1.jpg" alt="Family Picnic"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>The video of us celebrating my parent's birthday.</center></div>
+	<div class="back"><video src="videos/fam1.MOV" controls></video></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>A day out at Zoo Taiping with my family.</center></div>
+	<div class="back"><video src="videos/fam2.MOV" controls></video></div>
+</div>
+</div>
+</div>
+</div>
+
+<h2 id="Friends">Friends</h2>
+	<div class="section">
+	<div class="gallery">
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>We first met during our first theory driving class, and to our surprise, we now attend the same campus. We enjoy spending time together whenever we can.</center></div>
+	<div class="back"><img src="images/friend1.jpg" alt="Best Friend"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>These were my roommates in the first and second semesters.</center></div>
+	<div class="back"><img src="images/friend2.jpg" alt="My Roommates"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>These are my closest friends from my high school days.</center></div>
+	<div class="back"><img src="images/friend3.jpg" alt="My High School Friends"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>My first friend at my industrial training was Ummie, who is also my first international friend.</center></div>
+	<div class="back"><img src="images/friend4.jpg" alt="My High School Friends"></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<h2 id="Interests">Interests</h2>
+	<div class="section">
+	<div class="gallery">
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>Formula 1</center></div>
+	<div class="back"><img src="images/f1.jpeg" alt="Formula 1"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>My favorite driver, Lando Norris, won his first race at the Miami Grand Prix.</center></div>
+	<div class="back"><img src="images/lando1.jpeg" alt="Lando Norris"></div>
+</div>
+</div>
+
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>A fan-made video captures the excitement of Lando Norris's first race victory.</center></div>
+	<div class="back"><video src="videos/lando1.mp4" controls></video></div>
+</div>
+</div>
+</main>
+
+<br>
+
+<p style="text-align: center;"><a href="#top" style="color: #00ffff; text-decoration: none;">Back to Top</a></p>
+
+<footer>
+	<p>&copy; 2024 Farah 'Alya. All Rights Reserved.</p>
+	<p><strong>Contact Me</strong></p>
+<p>
+	<a href="https://wa.me/message/QRPNKZI5IYRXO1" target="_blank">WhatsApp</a> | 
+	<a href="mailto:2022866948@student.uitm.edu.my">Email</a>
+</p>
+</footer>
+
+</body>
+</html>

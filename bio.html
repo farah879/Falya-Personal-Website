@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me</title>
+
+<style>
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, serif;
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background-color: Cyan;
+	color: Black;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+footer {
+	background-color: #024242;
+	color: white;
+	text-align: center;
+	padding: 3px 10px;
+	font-size: 10px;
+	box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+	margin-top: 10px;
+}
+
+footer a {
+	color: #1abc9c;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+footer p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+	gap: 10px;
+}
+
+.container {
+	flex: 1;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #1a1a1a;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+h2 {
+	color: cyan;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	color: cyan;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+.section-with-image {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.section-with-image img {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	margin-right: 20px;
+	object-fit: cover;
+	box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5);
+}
+.section-with-image p {
+	flex: 1;
+}
+span {
+	color: cyan;
+	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+.section-with-image {
+	flex-direction: column;
+	align-items: center;
+}
+.section-with-image img {
+	margin-bottom: 20px;
+}
+}
+
+</style>
+</head>
+
+<body>
+<header><h1>About Me</h1></header>
+
+<br>
+<div class="container">
+
+<h2>Personal Information</h2>
+
+<ol>
+
+<li> 
+<h3>Name</h3>
+<div class="section-with-image">
+	<img src="images/me2.jpg" alt="My Image">
+	<p>My name is <span>Farah 'Alya binti Abd Aziz</span>, and also known as <span>Falya</span>.</p>
+</div>
+</li>
+
+<li>
+<h3>Pet</h3>
+<div class="section-with-image">
+	<img src="images/shia.jpg" alt="My Pet Image">
+	<p>I have a pet named <span>Shia</span>, a lovely sugar glider who enjoys sleeping during the day and is active at night.</p>
+</div>
+</li>
+
+<li>
+<h3>Hobbies</h3>
+<div class="section-with-image">
+	<img src="images/thedouble.jpg" alt="Hobby Photo">
+	<p>Currently, my hobbies are watching <span>historical Chinese dramas</span> and listening to <span>music</span>.</p>
+</div>
+</li>
+
+<li>
+<h3>Ambition</h3>
+<div class="section-with-image">
+	<img src="images/cockpit.jpg" alt="Ambition Photo">
+	<p>when I was 15 years old, my ambition is to be a pilot, but now I would focusing in becoming <span>software developer</span>.</p>
+</div>
+</li>
+
+<li>
+<h3>Favorite Song</h3>
+<div class="section-with-image">
+	<img src="images/audio1.jpg" alt="Music Image">
+	<p> One of my favorite songs is <span>Like I Do</span> by <span> J. Tajor </span> </p>
+<audio controls>
+	<source src="audio/audio1.mp3"	 type="audio/mp3">
+	Your browser does not support the audio element.
+</audio>
+</div>
+</li>
+</ol>
+</div>
+
+<footer>
+	<p>&copy; 2024 Falya. All Rights Reserved.</p>
+	<p><strong>Contact Me</strong></p>
+<p>
+	<a href="https://wa.me/message/QRPNKZI5IYRXO1" target="_blank">WhatsApp</a> | 
+	<a href="mailto:2022866948@student.uitm.edu.my">Email</a>
+</p>
+</footer>
+
+</body>
+</html>

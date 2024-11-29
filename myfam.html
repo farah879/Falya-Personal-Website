@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Family</title>
+
+<style>
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', sans-serif;
+	background-color: black;
+	color: white;
+}
+
+header {
+	background-color: cyan;
+	color: black;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.table-container {
+	width: 80%;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+.table-container table {
+	width: 100%;
+	border: 1px solid cyan;
+}
+
+.table-container th, .table-container td {
+	border: 1px solid cyan;
+	padding: 10px;
+	text-align: center;
+}
+
+.image-container {
+	position: relative;
+	display: inline-block;
+}
+
+.image-container img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.image-container img:hover {
+	transform: scale(1.05);
+}
+
+.bios {
+	display: none;
+	position: absolute;
+	top: 14%;
+	left: 135%;
+	transform: translateX(-50%);
+	background-color: #9FE2BF;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.bio {
+	display: none;
+	position: absolute;
+	top: 8%;
+	left: 125%;
+	transform: translateX(-50%);
+	background-color: #9FE2BF;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.image-container:hover .bios {
+	display: block;
+}
+
+.image-container:hover .bio {
+	display: block;
+}
+
+.event-section {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.event-section img {
+	width: 30%;
+	margin: 10px 0;
+	border: 2px solid cyan;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+}
+
+.event-section img:hover {
+	transform: scale(1.05);
+}
+
+footer {
+	background-color: #024242;
+	color: white;
+	text-align: center;
+	padding: 20px 30px;
+	font-size: 20px;
+	box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+	margin-top: auto;
+}
+
+footer a {
+	color: #1abc9c;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #76ffd2;
+}
+
+footer p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+	gap: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header><h1>Welcome to My Family Page</h1></header>
+
+<h2><center>Present to You My Family</center></h2>
+
+<div class="table-container">
+
+<table>
+<tr>
+	<th>Name</th>
+	<th>Photo</th>
+</tr>
+
+<tr>
+	<td>Abd Aziz</td>
+
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/mylove.jpg">
+	<img src="images/mylove.jpg" alt="My Lovely PaMa">
+	<div class="bios">My Father with His Lover</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Norizmar</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/mylove.jpg" title="My PaMa">
+	<img src="images/mylove.jpg" alt="My Lovely PaMa">
+	<div class="bios">My Mother with Her Lover</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Mohd Afnan</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/abgnan.jpg" title="My Eldest Brother">
+	<img src="images/abgnan.jpg" alt="My Eldest Brother">
+	<div class="bio">My Eldest with His Lovely Family</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Mohd Hazwan</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/abgwan.jpg" title="My Second Brother">
+	<img src="images/abgwan.jpg" alt="My Older Brother">
+	<div class="bio">My Second Brother with His Lovely Family</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Farah Atikah</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/fatikah.jpg" title="My Lovely Sister">
+	<img src="images/fatikah.jpg" alt="My Older Sister">
+	<div class="bio">My Lovely Sister with Her Lovely Family</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Farah Athirah</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/fathirah.jpg" title="My Lovely Sister">
+	<img src="images/fathirah.jpg" alt="My Older Sister">
+	<div class="bio">My Lovely Sister with Her Lovely Husband</div>
+</div>
+</td>
+</tr>
+
+<tr>
+	<td>Zahin Farhan</td>
+<td>
+<div class="image-container">
+	<a target="_blank" href="images/farhan.jpg" title="My Youngest Brother">
+	<img src="images/farhan.jpg" alt="My Youngest Brother">
+	<div class="bios">My Youngest Brother</div>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+
+<div class="event-section">
+
+<h2>Family Event</h2>
+	<a target="_blank" href="images/event1.jpg">
+	<img src="images/event1.jpg" alt="Family Event"></a>
+	<p style="font-family: 'Hagrid';">During Eid Aidilfitri Last Year.</p>
+	<a target="_blank" href="images/event2.jpg">
+	<img src="images/event2.jpg" alt="Family Event"></a>
+	<p style="font-family: 'Hagrid';">During My Sister's Wedding.</p>
+</div>
+
+<footer>
+	<p>&copy; 2024 Farah 'Alya. All Rights Reserved.</p>
+	<p><strong>Contact Me</strong></p>
+<p>
+	<a href="https://wa.me/message/QRPNKZI5IYRXO1" target="_blank">WhatsApp</a> | 
+	<a href="mailto:2022866948@student.uitm.edu.my">Email</a>
+</p>
+</footer>
+
+</body>
+</html>

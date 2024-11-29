@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Farah</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom right, #032f30, #035f60, #057f80);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+}
+
+.main-content p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.hero-text {
+    margin-top: 20px;
+}
+
+.hero-text p {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-text span {
+    color: #032f30;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+    }
+    to {
+        text-shadow: 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content img {
+        width: 250px;
+    }
+
+    .hero-text p {
+        font-size: 28px;
+    }
+
+    .hero-text span {
+        font-size: 36px;
+    }
+}
+
+.clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.6);
+    color: cyan;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-content">
+    <a href="bio.html">
+        <img src="images/myphoto.png" alt="Farah's Photo">
+    </a>
+    <p>Click the image for <strong>About Me</strong></p>
+</div>
+
+<div class="hero-text">
+    <p>HI, I AM<br><span>FARAH 'ALYA</span></p>
+</div>
+
+<div class="clock" id="clock"></div>
+
+<script>
+function updateClock() {
+    const clock = document.getElementById('clock');
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

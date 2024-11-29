@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EXPERIENCE</title>
+
+<style>
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	font-family: Aileron, sans-serif;
+}
+
+header {
+	background-color: Cyan;
+	color: Black;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+img {
+	border: 1px solid cyan;
+	border-radius: 4px;
+	padding: 5px;
+	width: 150px;
+	transition: transform 0.2s;
+}
+
+img:hover {
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	transform: scale(1.05);
+}
+
+.lznk-title {
+	color: teal;
+	font-size: 30px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.lznk-title a {
+	color: teal;
+	text-decoration: none;
+}
+
+.lznk-title a:hover {
+	text-decoration: underline;
+	color: cyan;
+}
+
+.lznk-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin: 20px;
+}
+
+.lznk-container img {
+	border: 1px solid cyan;
+	border-radius: 4px;
+	padding: 5px;
+	width: 200px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lznk-container img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 8px rgba(0, 140, 186, 0.7);
+}
+
+.notes-title {
+	color: aliceblue;
+	font-size: 20px;
+	max-width: 600px;
+	text-align: justify;
+	margin: 20px;
+}
+
+.location-section {
+	margin: 50px 20px;
+	text-align: center;
+}
+
+.location-title {
+	color: Cyan;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.map-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto;
+}
+
+.map-container iframe {
+	border: 0;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 800px;
+	height: 300px;
+}
+
+h2 {
+	color: #00ffff;
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 2px solid cyan;
+	padding-bottom: 5px;
+}
+
+.section {
+	margin: 20px auto;
+	width: 80%;
+	flex-grow: 1;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 4px;
+	border: 1px solid cyan;
+}
+
+.card {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	perspective: 1000px;
+	display: inline-block;
+}
+
+.inner-card {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card:hover .inner-card {
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+}
+
+.front {
+	background-color: #00ffff;
+	color: #000;
+}
+
+.back {
+	background-color: #000;
+	transform: rotateY(180deg);
+}
+
+footer {
+	background-color: #024242;
+	color: white;
+	text-align: center;
+	padding: 15px 25px;
+	font-size: 20px;
+	box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+	margin-top: auto;
+	width: 100%;
+}
+
+footer a {
+	color: #1abc9c;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #76ffd2;
+}
+
+footer p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+	gap: 10px;
+}
+
+@media (max-width:768px) {
+.experience-title {
+	font-size: 60px;
+	margin-left: 50px;
+}
+
+.notes-title {
+	margin-left: 20px;
+	margin-right: 20px;
+	max-width: none;
+}
+
+.map-container iframe {
+	width: 95%;
+}
+}
+
+</style>
+</head>
+
+<body>
+<header><h1> My Experience </h1></header>
+
+<p class="lznk-title">
+<a href="https://www.zakatkedah.com.my/">Lembaga Zakat Negeri Kedah (LZNK)
+</a>
+</p>
+
+<div class="lznk-container">
+<a target="_blank" href="images/lznk.png">
+	<img src="images/lznk.png" alt="LZNK">
+</a>
+
+<p class="notes-title">During my time as an intern at LZNK was truly amazing.
+I learnt a lot of practical skills and information.
+Most importantly, I became friends with Rukayya Muhammad Bello, an international student
+that I affectionately call Ummie. My favourite part of my internship was meeting Ummie, and
+our friendship enhanced my educational experience in an amazing way.
+</p>
+</div>
+
+
+<div class="section">
+<h2>Activities</h2>
+	<div class="gallery">
+	<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>I did filing task.</center></div>
+	<div class="back"><img src="images/exp1.jpg" alt="Filing task"></div>
+</div>
+</div>
+
+<div class="card">
+	<div class="inner-card">
+	<div class="front"><center>This was my first time opening a new file.</center></div>
+	<div class="back"><img src="images/exp2.jpg" alt="New File"></div>
+</div>
+</div>
+
+<div class="card">
+	<div class="inner-card">
+	<div class="front"><center> I received my certificate as program volunteer.</center></div>
+	<div class="back"><img src="images/exp3.jpg" alt="Program Volunteers"></div>
+</div>
+</div>
+
+<div class="card">
+	<div class="inner-card">
+	<div class="front"><center> I attended the workshop as part of the organizing committee.</center></div>
+	<div class="back"><img src="images/exp4.jpg" alt="organizing committee"></div>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+
+<section class="location-section">
+	<h2 class="location-title">Internship Location</h2>
+<div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14137.00197615581!2d100.3813221896928!3d6.122311040364653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b44be94281445%3A0xe4ed131e130e6501!2sLembaga%20Zakat%20Negeri%20Kedah%20Darul%20Aman!5e0!3m2!1sen!2sus!4v1731921719475!5m2!1sen!2sus"
+	width="800" height="600" style="border:0;"
+	allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</section>
+
+<footer>
+	<p>&copy; 2024 Falya. All Rights Reserved.</p>
+	<p><strong>Contact Me</strong></p>
+<p>
+	<a href="https://wa.me/message/QRPNKZI5IYRXO1" target="_blank">WhatsApp</a> | 
+	<a href="mailto:2022866948@student.uitm.edu.my">Email</a>
+</p>
+</footer>
+
+</body>
+</html>
